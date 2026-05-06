@@ -86,3 +86,12 @@ https://huggingface.co/docs/lerobot/so101
 2. 참고자료 튜토리얼 한번씩 해보기
 3. 움직이는 물체 먼저 잡는 기술 구현
 4. 비전 알고리즘 확장
+
+# 20260429
+1. 필요한 것
+   Jetson, Open Manipulator X, RGB-D Camera*2, Server, 컨베이어 벨트
+2. 회의 내용
+   메인 기술 : 동적 Pick & Place
+   Pick & Place의 경우 모방 학습 or Inverse Kinemastic
+   IK의 경우 정확도가 높지 않을까 생각.
+   아이작심 기반의 모방 학습의 경우 토크 값 변환 필요. (Isaac Sim은 0.0이 Default, 실제 OMX는 2200) 

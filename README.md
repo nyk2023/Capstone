@@ -94,4 +94,10 @@ https://huggingface.co/docs/lerobot/so101
    메인 기술 : 동적 Pick & Place
    Pick & Place의 경우 모방 학습 or Inverse Kinemastic
    IK의 경우 정확도가 높지 않을까 생각.
-   아이작심 기반의 모방 학습의 경우 토크 값 변환 필요. (Isaac Sim은 0.0이 Default, 실제 OMX는 2200) 
+   아이작심 기반의 모방 학습의 경우 토크 값 변환 필요. (Isaac Sim은 0.0이 Default, 실제 OMX는 2200)
+
+# 5. 진행 상황
+
+1. 환경 구축
+   Jetson에 JetPack 설치 완료.
+   서버의 경우, 현재 연결 가능한 네트워크가 존재하지 않기에 구축 불가한 상황.

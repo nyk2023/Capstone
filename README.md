@@ -100,4 +100,5 @@ https://huggingface.co/docs/lerobot/so101
 
 1. 환경 구축
    - Jetson에 JetPack 설치 완료.
+   - ROS2 Humble, Open Manipulator X 패키지 설치 완료.
    - 서버의 경우, 현재 연결 가능한 네트워크가 존재하지 않기에 구축 불가한 상황.

@@ -5,3 +5,18 @@
 - 참고 : https://emanual.robotis.com/docs/en/platform/openmanipulator_x/overview/
 
   
+```
+ros2 launch open_manipulator_x_bringup hardware.launch.py
+```
+```
+ros2 launch open_manipulator_x_moveit_config moveit_core.launch.py
+```
+```
+ros2 run tf2_ros static_transform_publisher -0.065 0.0 0.08 -1.5708 0 -1.5708 end_effector_link camera_frame
+```
+```
+python3 colcon_ws/src/pick_and_place/robot_tf.py
+```
+```
+ros2 run open_manipulator_x_moveit_config ik_test.py
+```

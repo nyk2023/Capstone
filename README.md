@@ -4,7 +4,10 @@
 
 - 참고 : https://emanual.robotis.com/docs/en/platform/openmanipulator_x/overview/ 
 
-
+## Information
+- 한경국립대학교 AI반도체융합전공 2026 딥러닝 응용
+- 팀 이름 : PAP (이나연, 이윤결, 양승우, 이민혁)
+- 담당 교수님 : 장인훈 교수님
 
 
 ## 구동 방법

@@ -10,7 +10,7 @@
 - 담당 교수님 : 장인훈 교수님
 
 
-## 구동 방법
+### 구동 방법
 - 로봇 구동
 ```
 ros2 launch open_manipulator_x_bringup hardware.launch.py

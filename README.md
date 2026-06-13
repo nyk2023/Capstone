@@ -23,9 +23,9 @@ ros2 run tf2_ros static_transform_publisher -0.065 0.0 0.08 -1.5708 0 -1.5708 en
 ```
 - 객체 인식 및 Topic Publish
 ```
-python3 colcon_ws/src/pick_and_place/robot_tf.py
+ros2 run open_manipulator_x_moveit_config robot_tf.py
 ```
 - Inverse Kinematics를 기반으로한 Pick And Place 수행
 ```
-ros2 run open_manipulator_x_moveit_config ik_test.py
+ros2 run open_manipulator_x_moveit_config pick_and_place.py
 ```

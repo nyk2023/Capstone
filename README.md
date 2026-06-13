@@ -10,6 +10,20 @@
 
 ## 구동 방법
 - 로봇 구동
+- package 설치 및 빌드
+```
+cd ~/colcon_ws/src/open_manipulator
+```
+```
+git clone https://github.com/nyk2023/Capstone
+```
+```
+cd ~/colcon_ws
+```
+```
+colcon build --symlink-install
+```
+
 ```
 ros2 launch open_manipulator_x_bringup hardware.launch.py
 ```

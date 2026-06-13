@@ -1,26 +1,31 @@
-# OpenMANIPULATOR-X
-<img src="https://github.com/ROBOTIS-GIT/emanual/blob/master/assets/images/platform/openmanipulator_x/OpenManipulator.png">
-<img src="https://github.com/ROBOTIS-GIT/emanual/blob/master/assets/images/platform/openmanipulator_x/OpenManipulator_Chain_Capture.png" width="500">
+# 한경국립대 AI반도체융합전공 PAP
 
-The 4-DOF Open Manipulator-X now supports MoveIt 2, enabling enhanced motion planning and control for advanced robotic applications. This update also brings significant improvements to the teleoperation features, example use cases, and the graphical user interface (GUI), providing a more seamless and user-friendly experience for developers and researchers.
+해당 package는 기존에 ROBOTIS에서 제공하는 Open Manipulator X를 구동하는 package에 Pick and Place하는 내용을 수정하였습니다.
 
-- Active Branches: noetic, humble, jazzy, main
-- Legacy Branches: *-devel
+- 참고 : https://emanual.robotis.com/docs/en/platform/openmanipulator_x/overview/ 
 
-# ROBOTIS e-Manual for OpenMANIPULATOR-X
-- [http://emanual.robotis.com/docs/en/platform/openmanipulator/](http://emanual.robotis.com/docs/en/platform/openmanipulator/)
+## Information
+- Members : 이나연, 이윤결, 양승우, 이민혁
 
-# Open Source related to OpenMANIPULATOR-X
-- [open_manipulator](https://github.com/ROBOTIS-GIT/open_manipulator)
-- [open_manipulator_y](https://github.com/ROBOTIS-GIT/open_manipulator_y)
-- [open_manipulator_p](https://github.com/ROBOTIS-GIT/open_manipulator_p)
-- [dynamixel_sdk](https://github.com/ROBOTIS-GIT/DynamixelSDK)
-- [dynamixel_workbench](https://github.com/ROBOTIS-GIT/dynamixel-workbench)
-- [dynamixel_hardware_interface](https://github.com/ROBOTIS-GIT/dynamixel_hardware_interface)
 
-# Documents and Videos related to OpenMANIPULATOR-X
-- [ROBOTIS e-Manual for OpenMANIPULATOR-X](http://emanual.robotis.com/docs/en/platform/openmanipulator/)
-- [ROBOTIS e-Manual for OpenMANIPULATOR-P](https://emanual.robotis.com/docs/en/platform/openmanipulator_p/overview/)
-- [ROBOTIS e-Manual for DYNAMIXEL SDK](http://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_sdk/overview/)
-- [ROBOTIS e-Manual for DYNAMIXEL Workbench](http://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_workbench/)
-- [YouTube Play List for OpenMANIPULATOR](https://www.youtube.com/playlist?list=PLRG6WP3c31_WpEsB6_Rdt3KhiopXQlUkb)
+## 구동 방법
+- 로봇 구동
+```
+ros2 launch open_manipulator_x_bringup hardware.launch.py
+```
+- moveit & rviz2 실행
+```
+ros2 launch open_manipulator_x_moveit_config moveit_core.launch.py
+```
+- Camera와 End_effector 거리 조정
+```
+ros2 run tf2_ros static_transform_publisher -0.065 0.0 0.08 -1.5708 0 -1.5708 end_effector_link camera_frame
+```
+- Inverse Kinematics를 기반으로한 Pick And Place 수행
+```
+ros2 run open_manipulator_x_moveit_config pick_and_place.py
+```
+- 객체 인식 및 Topic Publish
+```
+ros2 run open_manipulator_x_moveit_config robot_tf.py
+```
